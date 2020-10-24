@@ -1,0 +1,48 @@
+.Button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background-color: transparent;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #363D44;
+    &:hover {
+        background-color: rgb(237, 237, 237);
+    }
+
+}
+
+.Button__bkgGrey {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background-color: #d2d6db;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    &:hover {
+        background-color: #e7e8e9;
+    }
+
+    @media(max-width: 440px) {
+        bottom: unset;
+        top: 0;
+    right: 16px;
+    }
+}
+            

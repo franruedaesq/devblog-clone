@@ -1,21 +1,36 @@
-import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Post from '../components/Post/Post'
+import style from '../styles/Home.module.scss'
 
-export default function Home() {
-  const [theRoute, setTheRoute] = useState("");
+export default function Home({mainPosts}) {
 
-  function handleChange(e) {
-    const { value } = e.target;
-    setTheRoute(value);
-  }
+  console.log(mainPosts)
 
+  const posts = mainPosts.map(item => {
+    return <Post title={item.title} id={item.id} user={item.user} comments_count={item.comments_count} profile_image={item.profile_image} date={item.edited_at} positive_reaction={item.positive_reactions_count} hashtags={item.tags}/>
+  })
   return (
-    <div className={styles.container}>
-      <input type="text" onChange={handleChange} />
-      <Link href={`/prueba/${theRoute}`}>
-        <div>Ir a /prueba/{theRoute}</div>
-      </Link>
+    <div className={style.Home}>
+      {posts}
     </div>
   );
 }
+
+export async function getStaticProps() {
+  const data = await fetch('https://dev.to/api/articles?tag=javascript&top=1')
+  const datajson = await data.json()
+  return {
+    props: {
+      mainPosts: datajson
+    }, 
+    revalidate: 3600
+  }
+}
+
+// getStaticProps --> Static render 
+// getServerSideProps --> Server Side render 
+// useEffect --> client side render 
+
+// / -->static 
+// /:id --> server side 

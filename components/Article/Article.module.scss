@@ -1,0 +1,70 @@
+.Article {
+    width: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    &__cover_img {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 48px;
+        color: #08090a;
+    }
+
+    &__body {
+        padding:32px 64px;
+        background-color: #fff;
+        margin-top: -5px;
+        overflow: hidden;
+    }
+
+    &__userInfo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__user__img{ 
+        width: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: .5px solid #cdcdcd;
+    }
+
+    &__username {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    &__date {
+        color: #64707d;
+    }
+
+    &__body_html {
+        font-size: 20px;
+        color: #08090a;
+        text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    }
+
+
+    @media(max-width: 440px) {
+        width: 90%;
+
+        h1 {
+            font-size: 26px;
+        }
+        
+        &__body {
+            padding: 32px 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__body_html {
+            font-size: 16px;
+        }
+    }
+}
