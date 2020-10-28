@@ -53,6 +53,57 @@
 
     }
 
+    &__tab {
+        border: none;
+        background-color: transparent;
+        color: #363D44;
+        font-size: 16px;
+        padding: 10px 8px;
+        margin: 0 4px;
+        margin-bottom: 8px;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color: rgba(192, 192, 242, 0.666);
+            color: #3b49df
+        }
+        &_selected {
+            border: none;
+            border-bottom: 1px solid blue;
+        }
+    }
+
+    &__selectedTab {
+        border: none;
+        background-color: transparent;
+        color: #363D44;
+        font-size: 16px;
+        padding: 10px 8px;
+        padding-bottom: 7px;
+        margin: 0 4px;
+        margin-bottom: 8px;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s;
+        border-bottom: 3px solid blue;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:hover {
+            background-color: rgba(192, 192, 242, 0.666);
+            color: #3b49df
+        }
+        &_selected {
+            border: none;
+            border-bottom: 1px solid blue;
+        }
+    }
+
+
+
 }
 
 .Button__bkgGrey {

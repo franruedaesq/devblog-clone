@@ -1,13 +1,21 @@
 .Home {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 20% 55% 20%;
+    padding: 15px;
+
+    &__postContainer {
+        display: flex;
+        flex-direction: column;
+        min-width: 500px;
+        max-width: 650px;
+    }
 
     @media(max-width: 440px) 
     {
         padding: 10px;
     }
 
-    
+    @media(min-width: 1200px) {
+        padding: 15px 70px;
+    }
 }

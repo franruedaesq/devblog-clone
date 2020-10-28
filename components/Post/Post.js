@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/Link';
 import Button from '../Button/Button'
 import style from './Post.module.scss'
 import moment from 'moment'
@@ -9,7 +9,7 @@ export default function Post({title, id, user, hashtags, positive_reaction, date
         const hashArray = hashtags.split(', ')
         // const hashted = hashArray.toString().replaceAll(',', ' #')
 
-        const items = hashArray.map(item => <a className={style.Post_hash}>#{item}</a>)
+        const items = hashArray.map((item, index) => <a key={index} className={style.Post_hash}>#{item}</a>)
 
         return items
         // return `#${hashted}`
