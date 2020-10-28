@@ -1,6 +1,6 @@
 import style from './Button.module.scss'
 
-export default function Button({positive_reactions,comments_count, type}) {
+export default function Button({positive_reactions,comments_count, type, innerText}) {
 
     switch (type) {
         case 'comments':
@@ -29,7 +29,20 @@ export default function Button({positive_reactions,comments_count, type}) {
                     Save
                 </button>
             )
+        case 'blue':
+            return (
+                <button className={style.Button__blue}>
+                {innerText}
+            </button>
+            )
+        case 'transparent':
+            return (
+                <button className={style.Button__white}>
+                {innerText}
+            </button>
+            )
         default:
+            return null
             break;
     }
 

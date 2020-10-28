@@ -16,6 +16,43 @@
         background-color: rgb(237, 237, 237);
     }
 
+    &__blue{
+        background-color: #3b49df;
+        height: 100%;
+        color: #f9fafa;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color:  #3e48bd;
+        }
+    }
+
+    &__white {
+        background-color: transparent;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #3b49df;;
+        height: 100%;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background-color:  rgb(221, 221, 221);
+        }
+
+    }
+
 }
 
 .Button__bkgGrey {

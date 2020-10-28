@@ -3,7 +3,6 @@ export default function DynamicRoute({ id }) {
 }
 
 export function getServerSideProps({ params }) {
-  console.log(params);
   return {
     props: {
       id: params.id

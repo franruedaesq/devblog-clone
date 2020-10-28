@@ -2,16 +2,17 @@ import { useState } from "react";
 import Link from "next/link";
 import Post from '../components/Post/Post'
 import style from '../styles/Home.module.scss'
+import TopBar from '../components/TopBar/TopBar'
 
 export default function Home({mainPosts}) {
 
-  console.log(mainPosts)
 
   const posts = mainPosts.map(item => {
     return <Post title={item.title} id={item.id} user={item.user} comments_count={item.comments_count} profile_image={item.profile_image} date={item.edited_at} positive_reaction={item.positive_reactions_count} hashtags={item.tags}/>
   })
   return (
     <div className={style.Home}>
+      
       {posts}
     </div>
   );

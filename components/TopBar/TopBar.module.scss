@@ -1,0 +1,22 @@
+.TopBar {
+    height: 56px;
+    background-color: #fff;
+    width: 100%;
+    padding: 7px;
+    
+    display: flex;
+    justify-content: space-between;
+
+    &__accessButtons {
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        justify-self: end;
+    }
+
+    &__search {
+        display: flex;
+        width: 70%;
+        gap: 10px;
+    }
+}
